@@ -1,10 +1,31 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">{{lang["menu-home"]}}</router-link> |
+    <router-link to="/about">{{lang["menu-about"]}}</router-link> 
   </div>
+  <Lang />
   <router-view/>
 </template>
+
+<script>
+import Lang from '@/components/Lang'
+import { useStore } from 'vuex'
+import { computed } from 'vue'
+
+export default {
+  components: {
+    Lang
+  },
+  setup(){
+
+    return {
+      lang: computed(()=>useStore().getters.getLang)
+    }
+  }
+}
+
+</script>
+
 
 <style lang="scss">
 #app {

@@ -1,0 +1,9 @@
+{
+    "lang-label":"Choisissez la langue: ",
+    "hello": "Bienvenue dans votre application Vue.js",
+    "bye": "adieu",
+    "about": "Ceci est une page à propos",
+    "menu-about":"À propos de",
+    "menu-home": "Début",
+    "logo":"/images/logo_fr.png"
+}
